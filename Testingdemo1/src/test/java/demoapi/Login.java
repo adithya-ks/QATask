@@ -15,7 +15,7 @@ public class Login {
     @Test
     public void verifyLoginWithValidCredentials() throws IOException {
         String response = sendLoginRequest("validUser", "validPass");
-        Assert.assertTrue(response.contains("token")); // Assuming successful login returns a token
+        Assert.assertTrue(response.contains("token"));
     }
 
     @Test
@@ -46,7 +46,7 @@ public class Login {
         HttpClient client = HttpClients.createDefault();
         HttpPost post = new HttpPost("https://dummyjson.com/auth/login");
 
-        // Constructing JSON string payload
+      
         String json = String.format("{\"username\":\"%s\", \"password\":\"%s\"}", username, password);
         StringEntity entity = new StringEntity(json);
         post.setEntity(entity);
