@@ -6,7 +6,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import static org.hamcrest.Matchers.*;
 
-public class NewTestTest {
+public class Search {
 
 	@BeforeClass
 	public void setup() {

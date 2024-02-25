@@ -1,77 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="3" failed="4" skipped="0">
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-24T16:29:23 IST" name="Default suite" finished-at="2024-02-24T16:29:33 IST" duration-ms="9553">
+  <suite started-at="2024-02-25T13:01:40 IST" name="Default suite" finished-at="2024-02-25T13:01:46 IST" duration-ms="5336">
     <groups>
     </groups>
-    <test started-at="2024-02-24T16:29:23 IST" name="Default test" finished-at="2024-02-24T16:29:33 IST" duration-ms="9553">
-      <class name="demoapi.ProductAddTest">
-        <test-method signature="testAddProduct(java.lang.String,int)[pri:0, instance:demoapi.ProductAddTest@3c3d9b6b]" started-at="2024-02-24T16:29:24 IST" name="testAddProduct" data-provider="productData" finished-at="2024-02-24T16:29:28 IST" duration-ms="4740" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"title":"New Product", "description":"A new product description", "price":100, "brand":"Test Brand", "category":"Test Category"}]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[200]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2024-02-25T13:01:40 IST" name="Default test" finished-at="2024-02-25T13:01:46 IST" duration-ms="5336">
+      <class name="demoapi.Login">
+        <test-method signature="verifyLoginWithInvalidPassword()[pri:0, instance:demoapi.Login@2a798d51]" started-at="2024-02-25T13:01:40 IST" name="verifyLoginWithInvalidPassword" finished-at="2024-02-25T13:01:43 IST" duration-ms="2350" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddProduct -->
-        <test-method signature="testAddProduct(java.lang.String,int)[pri:0, instance:demoapi.ProductAddTest@3c3d9b6b]" started-at="2024-02-24T16:29:28 IST" name="testAddProduct" data-provider="productData" finished-at="2024-02-24T16:29:29 IST" duration-ms="787" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"description":"Missing title", "price":100}]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[400]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- verifyLoginWithInvalidPassword -->
+        <test-method signature="verifyLoginWithInvalidUsername()[pri:0, instance:demoapi.Login@2a798d51]" started-at="2024-02-25T13:01:43 IST" name="verifyLoginWithInvalidUsername" finished-at="2024-02-25T13:01:43 IST" duration-ms="734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidUsername -->
+        <test-method signature="verifyLoginWithMissingCredentials()[pri:0, instance:demoapi.Login@2a798d51]" started-at="2024-02-25T13:01:43 IST" name="verifyLoginWithMissingCredentials" finished-at="2024-02-25T13:01:44 IST" duration-ms="681" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithMissingCredentials -->
+        <test-method signature="verifyLoginWithUnusualCharactersInCredentials()[pri:0, instance:demoapi.Login@2a798d51]" started-at="2024-02-25T13:01:44 IST" name="verifyLoginWithUnusualCharactersInCredentials" finished-at="2024-02-25T13:01:45 IST" duration-ms="724" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithUnusualCharactersInCredentials -->
+        <test-method signature="verifyLoginWithValidCredentials()[pri:0, instance:demoapi.Login@2a798d51]" started-at="2024-02-25T13:01:45 IST" name="verifyLoginWithValidCredentials" finished-at="2024-02-25T13:01:45 IST" duration-ms="688" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected status code does not match! expected [400] but found [200]]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code does not match! expected [400] but found [200]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at demoapi.ProductAddTest.testAddProduct(ProductAddTest.java:36)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at demoapi.Login.verifyLoginWithValidCredentials(Login.java:18)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
@@ -80,214 +66,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddProduct -->
-        <test-method signature="testAddProduct(java.lang.String,int)[pri:0, instance:demoapi.ProductAddTest@3c3d9b6b]" started-at="2024-02-24T16:29:29 IST" name="testAddProduct" data-provider="productData" finished-at="2024-02-24T16:29:30 IST" duration-ms="750" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"title":"Invalid Price", "description":"Test", "price":"one hundred", "category":"Test"}]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[400]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected status code does not match! expected [400] but found [200]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code does not match! expected [400] but found [200]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at demoapi.ProductAddTest.testAddProduct(ProductAddTest.java:36)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddProduct -->
-        <test-method signature="testAddProduct(java.lang.String,int)[pri:0, instance:demoapi.ProductAddTest@3c3d9b6b]" started-at="2024-02-24T16:29:30 IST" name="testAddProduct" data-provider="productData" finished-at="2024-02-24T16:29:31 IST" duration-ms="790" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"title":"LoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLoooooooooLooooooooo", "description":"Long title", "price":100, "category":"Test"}]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[400]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected status code does not match! expected [400] but found [200]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code does not match! expected [400] but found [200]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at demoapi.ProductAddTest.testAddProduct(ProductAddTest.java:36)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddProduct -->
-        <test-method signature="testAddProduct(java.lang.String,int)[pri:0, instance:demoapi.ProductAddTest@3c3d9b6b]" started-at="2024-02-24T16:29:31 IST" name="testAddProduct" data-provider="productData" finished-at="2024-02-24T16:29:31 IST" duration-ms="806" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"title":"Special! @#%", "description":"Contains special characters *&^%", "price":100, "category":"Test"}]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[200]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddProduct -->
-        <test-method signature="testAddProduct(java.lang.String,int)[pri:0, instance:demoapi.ProductAddTest@3c3d9b6b]" started-at="2024-02-24T16:29:31 IST" name="testAddProduct" data-provider="productData" finished-at="2024-02-24T16:29:32 IST" duration-ms="742" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"title":"Existing Product", "description":"A product with an existing name", "price":150, "brand":"Test Brand", "category":"Test Category"}]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[200]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddProduct -->
-        <test-method signature="testAddProduct(java.lang.String,int)[pri:0, instance:demoapi.ProductAddTest@3c3d9b6b]" started-at="2024-02-24T16:29:32 IST" name="testAddProduct" data-provider="productData" finished-at="2024-02-24T16:29:33 IST" duration-ms="766" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"title":"Negative Price", "description":"A product with a negative price", "price":-100, "category":"Test"}]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[400]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected status code does not match! expected [400] but found [200]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected status code does not match! expected [400] but found [200]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:1419)
-at org.testng.Assert.assertEquals(Assert.java:1383)
-at demoapi.ProductAddTest.testAddProduct(ProductAddTest.java:36)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddProduct -->
-      </class> <!-- demoapi.ProductAddTest -->
+        </test-method> <!-- verifyLoginWithValidCredentials -->
+      </class> <!-- demoapi.Login -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,41 +1,61 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>Testingdemo</groupId>
-  <artifactId>Testingdemo1</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>Testingdemo</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Testingdemo</groupId>
+	<artifactId>Testingdemo1</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Testingdemo</name>
 
-<dependencies>
-<dependency>
-    <groupId>io.rest-assured</groupId>
-    <artifactId>rest-assured</artifactId>
-    <version>4.3.3</version>
-    <scope>test</scope>
-</dependency>
+	<dependencies>
 
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.8.0</version>
-    <scope>test</scope>
-</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.1.2</version>
+		</dependency>
 
-<dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>slf4j-api</artifactId>
-    <version>1.7.30</version>
-</dependency>
-<!-- Logback Classic Implementation -->
-<dependency>
-    <groupId>ch.qos.logback</groupId>
-    <artifactId>logback-classic</artifactId>
-    <version>1.2.3</version>
-</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.3.3</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.8.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.30</version>
+		</dependency>
+		<!-- Logback Classic Implementation -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.12.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.13</version>
+		</dependency>
 
 
+	</dependencies>
 
-</dependencies>
-  
 
 </project>
