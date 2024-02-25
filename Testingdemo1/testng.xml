@@ -3,8 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="demoapi.APITestsWithTestNG"/>
-      <class name="demoapi.NewTestTest"/>
+      <class name="demoapi.Login"/>
+      <class name="demoapi.ProductAddTest"/>
+       <class name="demoapi.Search"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
